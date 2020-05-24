@@ -23,7 +23,7 @@ You can of course change the code to use whatever GPIO pin you want (as long as 
 
 
 ## Software
-This was originally written on Raspian version 8 ("Jessie"), but is now running on version 10, "Buster". I don't think it matters.
+This was originally written on Raspian version 8 ("Jessie"), but is now running on version 10, "Buster". I don't think it matters. It uses Python 3.7, I believe.
 
 It also uses the [GPIOZero](https://gpiozero.readthedocs.io/en/stable/index.html#) package, 
 which makes GPIO programming much easier.

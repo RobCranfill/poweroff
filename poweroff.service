@@ -1,0 +1,14 @@
+[Unit]
+Description=Cran's power-off button
+After=network.target
+
+[Service]
+ExecStart=/home/pi/bin/poweroff.py
+WorkingDirectory=/home/pi/bin
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

@@ -36,15 +36,13 @@ The program was pretty straightforward, although of course I made it a little mo
 I added a "test" mode so that I could test the software without actually shutting the system down every time.
 I added logging so I could see what it was doing.
 
-One complication: the code uses [signal.pause()](https://docs.python.org/3.5/library/signal.html#signal.pause) 
+One complication: the code uses [`signal.pause()`](https://docs.python.org/3.5/library/signal.html#signal.pause) 
 to allow the code to wait for the button push.
-
-(I could perhaps have used a loop around "sleep()", but this is what signal.pause is for!)
-
+(I could perhaps have used a loop around `sleep()`, but this is what `signal.pause` is for!)
 In the real use-case of this service, eveything works as desired because the system shutdown kills the Python process.
-But in test mode, the code never exits, even when I put an sys.exit() call in there!
+But in test mode, the code never exits, even when I put a `sys.exit()` call in there!
 
-But, as noted elsewhere on the web ( [here for instance](https://stackoverflow.com/questions/35203141/how-to-exit-python-program-on-raspberry) ) the signal.pause() won't exit until you do .... something. 
+But, as noted elsewhere on the web ([here for instance](https://stackoverflow.com/questions/35203141/how-to-exit-python-program-on-raspberry)) the `signal.pause()` won't exit until you do .... something. 
 The docs say "Cause the process to sleep until a signal is received" which was a little mysterious to me.
 And as shown in the code, you can either catch this signal, or not - either way serves to let the code exit.
 If you don't handle the signal, you will see "User defined signal 1" printed on the console at the end of the run. Fine.

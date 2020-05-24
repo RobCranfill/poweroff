@@ -17,13 +17,13 @@ I'm using an old RPi B 2 with the smaller 40-pin GPIO header,
 and using pin 26 ("GPIO7") to short to ground (pin 25) with a momentary-contact switch, 
 because those two pins are next to each other and I can use a little 2-contact header.
 
-[Picture of added switch here?]
+![RPi with power button](http://robcranfill.net/images/RPiPowerButton.jpg)
 
 You can of course change the code to use whatever GPIO pin you want (as long as it's an input!).
 
 
 ## Software
-This was originally written on Raspian version 8 ("Jessie"), but is now running on version 10, "Buster". I don't think it matters. It uses Python 3.7, I believe.
+This was originally written on Raspian version 8 ("Jessie"), but is now running on version 10, "Buster". I don't think it matters. It was developed under Python 3.7.3, but any Python 3.x should work. 
 
 It also uses the [GPIOZero](https://gpiozero.readthedocs.io/en/stable/index.html#) package, 
 which makes GPIO programming much easier.

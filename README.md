@@ -44,6 +44,7 @@ But in test mode, the code never exits, even when I put a `sys.exit()` call in t
 
 But, as noted elsewhere on the web ([here for instance](https://stackoverflow.com/questions/35203141/how-to-exit-python-program-on-raspberry)) the `signal.pause()` won't exit until you do .... something. 
 The docs say "Cause the process to sleep until a signal is received" which was a little mysterious to me.
+But after handling the button push (in test mode) we can send ourselves a SIGUSER1 signal, and that causes `signal.pause()` to finish.
 And as shown in the code, you can either catch this signal, or not - either way serves to let the code exit.
 If you don't handle the signal, you will see "User defined signal 1" printed on the console at the end of the run. Fine.
 

@@ -29,7 +29,8 @@ It was developed under Python 3.7.3, but any Python 3.x should work.
 It also uses the [GPIOZero](https://gpiozero.readthedocs.io/en/stable/index.html#) package,
 which makes GPIO programming much easier.
 
-This code can be run stand-alone, in test mode, or installed as a Linux service, which is beyond the scope of this document, as they say.
+This code can be run stand-alone, in test mode, or installed as a Linux service; to run as a service,
+use the included service file (you may need to edit it slightly for your install).
 
 
 ## Notes
